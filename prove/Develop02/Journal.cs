@@ -26,7 +26,9 @@ public class Journal
     }
     public void SaveToFile()
     {
-        string file = "journal.csv";
+        Console.WriteLine("File name (Do not include file extension)?");
+        string fileName = Console.ReadLine();
+        string file = $"{fileName}.csv";
 
         using (StreamWriter writer = new StreamWriter(file))
         {
@@ -49,7 +51,10 @@ public class Journal
     }
     public void LoadFromFile()
     {
-        string file = "journal.csv";
+        Console.WriteLine("File name (Do not include file extension)?");
+        string fileName = Console.ReadLine();
+
+        string file = $"{fileName}.csv";
 
         try
         {

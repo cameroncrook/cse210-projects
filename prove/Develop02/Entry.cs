@@ -1,16 +1,14 @@
 public class Entry
 {
     // Properties
-    public string Date = "";
+    public string Date;
     public string Prompt = "";
     public string Response = "";
 
     // Methods
     public void GenerateEntry(PromptGenerator promptGen)
     {
-        Console.WriteLine("Date:");
-        string date = Console.ReadLine();
-        this.Date = date;
+        this.Date = DateTime.Now.ToShortDateString();
 
         string prompt = promptGen.GenerateRandomPrompt();
         this.Prompt = prompt;
